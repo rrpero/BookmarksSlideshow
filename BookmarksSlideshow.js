@@ -26,7 +26,7 @@ define(["jquery", "qlik", "text!./BookmarksSlideshow.css",'./properties'], funct
             }
             //console.log('Sheet IDs: ',SheetIDs);
 
-            var html = '<html><button name="BookmarkSlideshow' + layout.qInfo.qId + '" id="bookmarkSlideshow_' + layout.qInfo.qId + '" class="bookmarkSlideshow">Start Slideshow</button><input id="showTopBar" type="hidden" value='+layout.props.showTopBars+'><br/><button id="showTopBarButton" type="button">Show/Hide Top Bars</button></html>';
+            var html = '<html><button name="BookmarkSlideshow' + layout.qInfo.qId + '" id="bookmarkSlideshow_' + layout.qInfo.qId + '" class="bookmarkSlideshow2" type="button">Start Slideshow</button><input id="showTopBar" type="hidden" value='+layout.props.showTopBars+'><br/><button id="showTopBarButton" type="button">Show/Hide Top Bars</button></html>';
 			
 		
             $element.html(html);
