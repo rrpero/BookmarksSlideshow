@@ -60,13 +60,22 @@ define(["jquery", "qlik", "text!./BookmarksSlideshow.css",'./properties'], funct
 });
 
 var slideshow = function (i, BookmarkIDs, SheetIDs, app, qlik, layout) {
-			$("#qv-toolbar-container").css({display: layout.props.showTopBars});
-			$(".qv-panel-current-selections").css({display: layout.props.showTopBars});		    
+	$("#qv-toolbar-container").css({display: layout.props.showTopBars});
+	$(".qv-panel-current-selections").css({display: layout.props.showTopBars});		    
 	setTimeout(function(){
-        app.bookmark.apply(BookmarkIDs[i]);
+		console.log("esse é o Bookmark "+ BookmarkIDs[i] +" de tipo "+ typeof(BookmarkIDs[i]));
+		if(BookmarkIDs[i]=="")
+			app.clearAll();
+		else
+			app.bookmark.apply(BookmarkIDs[i]);
         qlik.navigation.gotoSheet(SheetIDs[i]);
-        setInterval(function(){     
-            app.bookmark.apply(BookmarkIDs[i]);
+        setInterval(function(){    
+
+			console.log("esse é o Bookmark "+ BookmarkIDs[i] +" de tipo "+ typeof(BookmarkIDs[i]));
+			if(BookmarkIDs[i]=="")
+				app.clearAll();
+			else		
+				app.bookmark.apply(BookmarkIDs[i]);
             qlik.navigation.gotoSheet(SheetIDs[i]);
         },layout.props.refreshInterval*layout.props.noOfSlides);
     },layout.props.refreshInterval*i); 
