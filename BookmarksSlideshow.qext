@@ -1,6 +1,6 @@
 {
 	"name":"BookmarksSlideshow",
-	"description":"Sets in motion a slideshow of bookmarks across one or multiple sheets with option to  hide top bars. Allow only hode top  bars and use the app with shotcurts. (ctrl+home, ctrol+end, ctrl + '->' and ctrol + '<-'. This extension is based on the https://github.com/fadyheiba/Bookmarks-Slideshow developed by Fady Heiba",
+	"description":"Sets in motion a slideshow of bookmarks across one or multiple sheets with option to  hide top bars. Allow only hide top  bars and use the app with shotcurts. (ctrl+home, ctrol+end, ctrl + '->' and ctrol + '<-'. This extension is based on the https://github.com/fadyheiba/Bookmarks-Slideshow developed by Fady Heiba",
 	"icon":"extension",
 	"type":"visualization",
 	"version":"1.0.3",
